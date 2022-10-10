@@ -1,4 +1,9 @@
-const removeFromArray = function() {
+const removeFromArray = function(myArray, b, c) { 
+    for (let i = 0; i < myArray.length; i++ ) {
+        return myArray;
+    }
+
+
 
 };
 
