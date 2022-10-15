@@ -1,16 +1,29 @@
-const sumAll = function (num1, num2) {
+
+// @param defines the argument as numbers (x, y) for easier readability when invoking the function
+/** 
+ * @param {number} x
+ * @param {number} y
+*/
+const sumAll = function (x, y) {
+  
+  const isNumber 
+    = typeof x === "number" 
+    && typeof y === "number"
+  
+  const isPositive
+    = x > 0 
+    && y > 0
+
+
+  if (!isPositive || !isNumber) {
+      return "ERROR";
+  } 
+
+  const start = Math.min(x, y);
+  const end = Math.max(x, y);
+  
   let sum = 0;
-  if (num1 < 0 || num2 < 0) {
-    return "ERROR";
-  } else if (typeof num1 !== "number" || typeof num2 !== "number") {
-    return "ERROR";
-  }
-  if (num1 > num2) {
-    let sumTemp = num1;
-    num1 = num2;
-    num2 = sumTemp;
-  }
-  for (let i = num1; i <= num2; i++) {
+  for (let i = start; i <= end; i++) {
     sum += i;
   }
   return sum;
