@@ -6,7 +6,6 @@ const palindromes = function (incomingString = "") {
   const reversed = split.reverse();
   const joined = reversed.join("");
   return cased === joined;
-  let a = 0;
 };
 
 // Do not edit below this line
